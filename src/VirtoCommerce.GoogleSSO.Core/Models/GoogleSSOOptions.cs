@@ -37,25 +37,10 @@ public class GoogleSSOOptions
     /// </summary>
     public string[] DefaultUserRoles { get; set; }
 
-    ////
-    //// Summary:
-    ////     Gets or sets the discovery endpoint for obtaining metadata
-    //public string MetadataAddress { get; set; }
-
     /// <summary>
     /// Check preferred_username claim as a fallback scenario in case when UPN claim is not set
     /// </summary>
     public bool UsePreferredUsername { get; set; }
-
-    ///// <summary>
-    ///// Check email claim as a fallback scenario in case when UPN claim is not set
-    ///// </summary>
-    //public bool UseEmail { get; set; }
-
-    ///// <summary>
-    ///// Allows to configure Token Validation Parameters. Supported values: Default - generic OpenID Connect provider, MultitenantAzureAD and Disabled.
-    ///// </summary>
-    //public ValidateIssuerType ValidateIssuer { get; set; }
 
     /// <summary>
     /// Login type priority

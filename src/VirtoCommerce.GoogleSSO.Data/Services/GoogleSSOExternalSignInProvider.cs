@@ -26,11 +26,6 @@ public class GoogleSSOExternalSignInProvider(IOptions<GoogleSSOOptions> googleSs
             userName = externalLoginInfo.Principal.FindFirstValue("name");
         }
 
-        //if (string.IsNullOrWhiteSpace(userName) && _googleSsoOptions.UseEmail)
-        //{
-        //    userName = externalLoginInfo.Principal.FindFirstValue(ClaimTypes.Email);
-        //}
-
         if (string.IsNullOrWhiteSpace(userName))
         {
             throw new InvalidOperationException("Received external login info does not have an UPN claim or DefaultUserName.");

@@ -45,21 +45,11 @@ public class Module : IModule, IHasConfiguration
                         openIdConnectOptions.UseTokenLifetime = true;
                         openIdConnectOptions.RequireHttpsMetadata = false;
                         openIdConnectOptions.CallbackPath = new PathString("/signin-google");
-                        // openIdConnectOptions.ResponseType = "code";
-                        // openIdConnectOptions.SaveTokens = true;
                         openIdConnectOptions.SignInScheme = IdentityConstants.ExternalScheme;
-                        // openIdConnectOptions.MetadataAddress = options.MetadataAddress;
 
                         openIdConnectOptions.Scope.Add("openid");
                         openIdConnectOptions.Scope.Add("profile");
                         openIdConnectOptions.Scope.Add("email");
-
-                        //openIdConnectOptions.ClientSecret = "{your-client-secret}";
-                        //openIdConnectOptions.ResponseType = "code";
-                        //openIdConnectOptions.SaveTokens = true;
-                        //openIdConnectOptions.Scope.Add("openid");
-                        //openIdConnectOptions.Scope.Add("profile");
-                        //openIdConnectOptions.Scope.Add("email");
 
                         var serviceDescriptor = serviceCollection.FirstOrDefault(descriptor => descriptor.ServiceType == typeof(JwtSecurityTokenHandler));
                         if (serviceDescriptor?.ImplementationInstance is JwtSecurityTokenHandler defaultTokenHandler)
