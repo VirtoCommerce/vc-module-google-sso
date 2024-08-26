@@ -9,8 +9,8 @@
     <!--<dependency id="VirtoCommerce.Core" version="3.800.0" />-->
   </dependencies>
 
-  <title>VirtoCommerce GoogleSSO module</title>
-  <description>VirtoCommerce GoogleSSO module</description>
+  <title>Google Single Sign-On</title>
+  <description>Enables Google external login setup (Single Sign-On) for Virto Commerce Platform and Frontend</description>
 
   <authors>
     <author>Vasily Kotov</author>
@@ -28,6 +28,6 @@
 
   <releaseNotes>First version.</releaseNotes>
   <copyright>Copyright © 2024 VirtoCommerce. All rights reserved</copyright>
-  <tags>extension module</tags>
+  <tags>Google</tags>
   <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
 </module>
