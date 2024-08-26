@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <id>VirtoCommerce.GoogleSSO</id>
+  <version>3.800.0</version>
+  <version-tag></version-tag>
+
+  <platformVersion>3.825.0</platformVersion>
+  <dependencies>
+    <!--<dependency id="VirtoCommerce.Core" version="3.800.0" />-->
+  </dependencies>
+
+  <title>VirtoCommerce GoogleSSO module</title>
+  <description>VirtoCommerce GoogleSSO module</description>
+
+  <authors>
+    <author>Vasily Kotov</author>
+  </authors>
+  <owners>
+    <owner>VirtoCommerce</owner>
+  </owners>
+
+  <projectUrl>https://github.com/VirtoCommerce/vc-module-google-sso</projectUrl>
+  <iconUrl>Modules/$(VirtoCommerce.GoogleSSO)/Content/logo.png</iconUrl>
+  <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+  <assemblyFile>VirtoCommerce.GoogleSSO.Web.dll</assemblyFile>
+  <moduleType>VirtoCommerce.GoogleSSO.Web.Module, VirtoCommerce.GoogleSSO.Web</moduleType>
+
+  <releaseNotes>First version.</releaseNotes>
+  <copyright>Copyright © 2024 VirtoCommerce. All rights reserved</copyright>
+  <tags>extension module</tags>
+  <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
+</module>
