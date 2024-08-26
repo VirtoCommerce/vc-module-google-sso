@@ -17,9 +17,48 @@ Google SSO module integrates Virto Commerce with Google to provide secure authen
 
 
 ## Setup
-1. Create the Google OAuth 2.0 Client ID and secret by following the guidance in [Integrating Google Sign-In into your web app](https://developers.google.com/identity/sign-in/web/sign-in).
-2. Store the Google client ID and secret.
-3. Configure Google authentication for the store.
+
+### Create Google OAuth 2.0 Client
+To use Google APIs in an application with OAuth 2.0, you need authorization credentials that identify the app for Google's OAuth 2.0 server. Your applications will be able to use these credentials to access APIs that you have enabled for that project.
+
+To create credentials for your project:
+
+1. Go to [Google API & Services](https://console.cloud.google.com/apis).
+1. Create a new project and open the dashboard.
+1. In the OAuth consent screen of the dashboard:
+    * Select User Type → External and click CREATE.
+    * In the App Information dialogue, type the app name, user support email, and developer contact information.
+    * Skip Scopes.
+    * Skip Test users.
+    * Review the OAuth consent screen and return to the app dashboard.
+    * In the Credentials tab of the app dashboard, select CREATE CREDENTIALS > OAuth client ID.
+1. Select Application type → Web application and choose a name.
+1. In the Authorized redirect URIs section, select ADD URI to set the redirect URI. Run the platform using the HTTPS scheme. Otherwise, the SSO won't work.
+
+> Note: If your platform runs on a local machine, put https://localhost:10645/signin-google.
+
+1. Click CREATE.
+1. Save Client ID and Client Secret to use them in the module.
+
+### Configure Google sign-in
+Store Google Client ID, secret values and other sensitive settings in KeyVault Storage. In our example, we use the appsettings.json configuration file. Add the following section to the configuration:
+
+```json
+"Google": {
+    "Enabled": true,
+    "AuthenticationType": "Google",
+    "AuthenticationCaption": "Google",
+    "ClientId": "<your Client ID>",
+    "ClientSecret": "<your Client Secret>",
+    "DefaultUserType": "Manager"
+}
+```
+
+### Enable Google for Virto Commerce Frontend
+1. Go to Virto Commerce Platforn, Stores, select a store 
+1. Click Authentication widget and activate Google sign-in for the store.
+
+![image](https://github.com/user-attachments/assets/75c82454-0f43-4c2a-bada-8d20332fa9b9)
 
 ## References
 * Home: https://virtocommerce.com
