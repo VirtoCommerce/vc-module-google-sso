@@ -1,6 +1,6 @@
 namespace VirtoCommerce.GoogleSSO.Core.Models;
 
-public class GoogleSSOOptions
+public class GoogleSsoOptions
 {
     /// <summary>
     /// Determines whether the user authentication via Google SSO is enabled.

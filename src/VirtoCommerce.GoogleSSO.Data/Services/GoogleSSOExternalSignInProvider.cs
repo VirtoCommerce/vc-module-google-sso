@@ -7,9 +7,9 @@ using VirtoCommerce.Platform.Security.ExternalSignIn;
 
 namespace VirtoCommerce.GoogleSSO.Data.Services;
 
-public class GoogleSSOExternalSignInProvider(IOptions<GoogleSSOOptions> googleSsoOptions) : IExternalSignInProvider
+public class GoogleSSOExternalSignInProvider(IOptions<GoogleSsoOptions> googleSsoOptions) : IExternalSignInProvider
 {
-    private readonly GoogleSSOOptions _googleSsoOptions = googleSsoOptions.Value;
+    private readonly GoogleSsoOptions _googleSsoOptions = googleSsoOptions.Value;
 
     public bool AllowCreateNewUser => _googleSsoOptions.AllowCreateNewUser;
 

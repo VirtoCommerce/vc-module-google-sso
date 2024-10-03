@@ -26,9 +26,9 @@ public class Module : IModule, IHasConfiguration
 
         if (googleSsoSection.GetChildren().Any())
         {
-            var options = new GoogleSSOOptions();
+            var options = new GoogleSsoOptions();
             googleSsoSection.Bind(options);
-            serviceCollection.Configure<GoogleSSOOptions>(googleSsoSection);
+            serviceCollection.Configure<GoogleSsoOptions>(googleSsoSection);
 
             if (options.Enabled)
             {
