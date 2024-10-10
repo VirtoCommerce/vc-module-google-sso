@@ -1,4 +1,3 @@
-using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
@@ -43,7 +42,6 @@ public class Module : IModule, IHasConfiguration
 
                         openIdConnectOptions.Authority = "https://accounts.google.com";
                         openIdConnectOptions.UseTokenLifetime = true;
-                        openIdConnectOptions.RequireHttpsMetadata = false;
                         openIdConnectOptions.CallbackPath = new PathString("/signin-google");
                         openIdConnectOptions.SignInScheme = IdentityConstants.ExternalScheme;
 
@@ -51,31 +49,22 @@ public class Module : IModule, IHasConfiguration
                         openIdConnectOptions.Scope.Add("profile");
                         openIdConnectOptions.Scope.Add("email");
 
-                        var serviceDescriptor = serviceCollection.FirstOrDefault(descriptor => descriptor.ServiceType == typeof(JwtSecurityTokenHandler));
-                        if (serviceDescriptor?.ImplementationInstance is JwtSecurityTokenHandler defaultTokenHandler)
+                        openIdConnectOptions.Events.OnRedirectToIdentityProvider = context =>
                         {
-                            openIdConnectOptions.UseSecurityTokenValidator = true;
-#pragma warning disable CS0618 // Type or member is obsolete
-                            openIdConnectOptions.SecurityTokenValidator = defaultTokenHandler;
-#pragma warning restore CS0618 // Type or member is obsolete
-
-                            openIdConnectOptions.Events.OnRedirectToIdentityProvider = context =>
+                            var oidcUrl = context.Properties.GetOidcUrl();
+                            if (!string.IsNullOrEmpty(oidcUrl))
                             {
-                                var oidcUrl = context.Properties.GetOidcUrl();
-                                if (!string.IsNullOrEmpty(oidcUrl))
-                                {
-                                    context.ProtocolMessage.RedirectUri = oidcUrl;
-                                }
-                                return Task.CompletedTask;
-                            };
-                        }
+                                context.ProtocolMessage.RedirectUri = oidcUrl;
+                            }
+                            return Task.CompletedTask;
+                        };
                     });
 
                 // register default external provider implementation
                 serviceCollection.AddSingleton<GoogleSSOExternalSignInProvider>();
                 serviceCollection.AddSingleton(provider => new ExternalSignInProviderConfiguration
                 {
-                    AuthenticationType = "GoogleSSO",
+                    AuthenticationType = options.AuthenticationType,
                     Provider = provider.GetService<GoogleSSOExternalSignInProvider>(),
                     LogoUrl = "Modules/$(VirtoCommerce.GoogleSSO)/Content/provider-logo.webp"
                 });
