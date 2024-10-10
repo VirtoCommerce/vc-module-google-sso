@@ -10,12 +10,12 @@ public class GoogleSsoOptions
     /// <summary>
     /// Sets AuthenticationType value for Google SSO authentication provider.
     /// </summary>
-    public string AuthenticationType { get; set; }
+    public string AuthenticationType { get; set; } = "GoogleSSO";
 
     /// <summary>
     /// Sets human-readable caption for Google SSO authentication provider. It is visible on sign-in page.
     /// </summary>
-    public string AuthenticationCaption { get; set; }
+    public string AuthenticationCaption { get; set; } = "Google";
 
     /// <summary>
     /// Application ID of the VirtoCommerce platform application registered in Google Developer Console.
@@ -30,7 +30,7 @@ public class GoogleSsoOptions
     /// <summary>
     /// Default user type for users created by Google SSO accounts.
     /// </summary>
-    public string DefaultUserType { get; set; }
+    public string DefaultUserType { get; set; } = "Manager";
 
     /// <summary>
     /// Default user roles for users created by Google SSO accounts.

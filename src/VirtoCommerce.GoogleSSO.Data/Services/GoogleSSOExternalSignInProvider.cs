@@ -36,7 +36,7 @@ public class GoogleSSOExternalSignInProvider(IOptions<GoogleSsoOptions> googleSs
 
     public string GetUserType()
     {
-        return _googleSsoOptions.DefaultUserType ?? "Manager";
+        return _googleSsoOptions.DefaultUserType;
     }
 
     public string[] GetUserRoles()

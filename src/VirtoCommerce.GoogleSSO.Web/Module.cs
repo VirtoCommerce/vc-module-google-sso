@@ -75,7 +75,7 @@ public class Module : IModule, IHasConfiguration
                 serviceCollection.AddSingleton<GoogleSSOExternalSignInProvider>();
                 serviceCollection.AddSingleton(provider => new ExternalSignInProviderConfiguration
                 {
-                    AuthenticationType = "GoogleSSO",
+                    AuthenticationType = options.AuthenticationType,
                     Provider = provider.GetService<GoogleSSOExternalSignInProvider>(),
                     LogoUrl = "Modules/$(VirtoCommerce.GoogleSSO)/Content/provider-logo.webp"
                 });
