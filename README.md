@@ -46,10 +46,10 @@ Store Google Client ID, secret values and other sensitive settings in KeyVault S
 ```json
 "Google": {
     "Enabled": true,
-    "AuthenticationType": "Google",
+    "AuthenticationType": "GoogleSSO",
     "AuthenticationCaption": "Google",
-    "ClientId": "<your Client ID>",
-    "ClientSecret": "<your Client Secret>",
+    "ApplicationId": "<your Client ID>",
+    "Secret": "<your Client Secret>",
     "DefaultUserType": "Manager"
 }
 ```
