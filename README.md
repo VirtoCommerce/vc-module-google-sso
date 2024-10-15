@@ -44,7 +44,7 @@ To create credentials for your project:
 Store Google Client ID, secret values and other sensitive settings in KeyVault Storage. In our example, we use the appsettings.json configuration file. Add the following section to the configuration:
 
 ```json
-"Google": {
+"GoogleSSO": {
     "Enabled": true,
     "AuthenticationType": "GoogleSSO",
     "AuthenticationCaption": "Google",
