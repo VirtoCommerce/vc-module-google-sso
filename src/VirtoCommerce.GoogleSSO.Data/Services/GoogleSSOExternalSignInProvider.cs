@@ -21,14 +21,14 @@ public class GoogleSSOExternalSignInProvider(IOptions<GoogleSsoOptions> googleSs
     {
         var userName = externalLoginInfo.Principal.FindFirstValue(ClaimTypes.Email);
 
-        if (string.IsNullOrWhiteSpace(userName) && _googleSsoOptions.UsePreferredUsername)
+        if (string.IsNullOrWhiteSpace(userName))
         {
-            userName = externalLoginInfo.Principal.FindFirstValue("name");
+            userName = externalLoginInfo.Principal.FindFirstValue("email");
         }
 
         if (string.IsNullOrWhiteSpace(userName))
         {
-            throw new InvalidOperationException("Received external login info does not have an UPN claim or DefaultUserName.");
+            throw new InvalidOperationException("Received external login info does not contain an email claim.");
         }
 
         return userName;
@@ -36,7 +36,7 @@ public class GoogleSSOExternalSignInProvider(IOptions<GoogleSsoOptions> googleSs
 
     public string GetUserType()
     {
-        return _googleSsoOptions.DefaultUserType ?? "Manager";
+        return _googleSsoOptions.DefaultUserType;
     }
 
     public string[] GetUserRoles()

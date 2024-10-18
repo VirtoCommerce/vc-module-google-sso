@@ -33,7 +33,7 @@ To create credentials for your project:
     * Review the OAuth consent screen and return to the app dashboard.
     * In the Credentials tab of the app dashboard, select CREATE CREDENTIALS > OAuth client ID.
 1. Select Application type → Web application and choose a name.
-1. In the Authorized redirect URIs section, select ADD URI to set the redirect URI. Run the platform using the HTTPS scheme. Otherwise, the SSO won't work.
+1. In the Authorized redirect URIs section, select ADD URI to set the redirect URI (`https://{host}/signin-google`). Run the platform using the HTTPS scheme. Otherwise, the SSO won't work.
 
 > Note: If your platform runs on a local machine, put https://localhost:10645/signin-google.
 
@@ -44,19 +44,17 @@ To create credentials for your project:
 Store Google Client ID, secret values and other sensitive settings in KeyVault Storage. In our example, we use the appsettings.json configuration file. Add the following section to the configuration:
 
 ```json
-"Google": {
+"GoogleSSO": {
     "Enabled": true,
-    "AuthenticationType": "Google",
-    "AuthenticationCaption": "Google",
-    "ClientId": "<your Client ID>",
-    "ClientSecret": "<your Client Secret>",
-    "DefaultUserType": "Manager"
+    "ApplicationId": "<your Client ID>",
+    "Secret": "<your Client Secret>"
 }
 ```
 
 ### Enable Google for Virto Commerce Frontend
-1. Go to Virto Commerce Platforn, Stores, select a store 
+1. Go to Virto Commerce Platform, Stores, select a store 
 1. Click Authentication widget and activate Google sign-in for the store.
+1. Add store URL to the list of authorized redirect URIs (`https://{store-host}/signin-google`).
 
 ![image](https://github.com/user-attachments/assets/75c82454-0f43-4c2a-bada-8d20332fa9b9)
 
