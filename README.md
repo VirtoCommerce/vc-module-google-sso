@@ -60,7 +60,7 @@ Store Google Client ID, secret values and other sensitive settings in KeyVault S
 
 ## References
 * Home: https://virtocommerce.com
-* Documentation: https://docs.virtocommerce.org
+* Documentation: [https://docs.virtocommerce.org](https://docs.virtocommerce.org/platform/user-guide/google-sso/overview/)
 * Community: https://www.virtocommerce.org
 * [Download Latest Release](https://github.com/VirtoCommerce/vc-module-google-sso/releases)
 
