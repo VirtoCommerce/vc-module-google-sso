@@ -9,8 +9,6 @@ The Google SSO module integrates Virto Commerce with Google to provide secure au
 
 * The Google SSO module can be integrated with both the Virto Commerce Platform and the Frontend Application
 
-
-## Screenshots
 ![image](https://github.com/user-attachments/assets/d4b7e292-7317-4bdd-98f8-7e9105ae3a9e)
 ![image](https://github.com/user-attachments/assets/9fb75bea-9161-4fb2-89e0-b1a6c92d36cd)
 ![image](https://github.com/user-attachments/assets/b6c31c1a-1f95-4de0-97e2-81a04908bde3)
@@ -71,7 +69,7 @@ Store Google Client ID, secret values and other sensitive settings in KeyVault S
 * [Installation](https://docs.virtocommerce.org/platform/user-guide/modules-installation/)
 * [Home](https://virtocommerce.com)
 * [Community](https://www.virtocommerce.org)
-* [Download Latest Release](https://github.com/VirtoCommerce/vc-module-google-sso/releases/latest)
+* [Download latest release](https://github.com/VirtoCommerce/vc-module-google-sso/releases/latest)
 
 ## License
 Copyright (c) Virto Solutions LTD.  All rights reserved.
