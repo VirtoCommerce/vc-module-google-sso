@@ -1,16 +1,14 @@
 # Google Single Sign-On
 
-## Overview
-
 Google Single Sign-On (SSO) is a module that provides users with a simplified sign-in experience. It allows users to access multiple applications with a single set of credentials, eliminating the need to remember different usernames and passwords for each application.
 
-Google SSO module integrates Virto Commerce with Google to provide secure authentication and authorization for cloud and on-premises applications. This helps to improve productivity, security, and user satisfaction by reducing the number of times users are prompted for their credentials.
+The Google SSO module integrates Virto Commerce with Google to provide secure authentication and authorization for cloud and on-premises applications. This helps to improve productivity, security, and user satisfaction by reducing the number of times users are prompted for their credentials.
 
 
-## Features
-* Google SSO for Virto Commerce Platform and Frontend.
+## Key features
 
-## Screenshots
+* The Google SSO module can be integrated with both the Virto Commerce Platform and the Frontend Application
+
 ![image](https://github.com/user-attachments/assets/d4b7e292-7317-4bdd-98f8-7e9105ae3a9e)
 ![image](https://github.com/user-attachments/assets/9fb75bea-9161-4fb2-89e0-b1a6c92d36cd)
 ![image](https://github.com/user-attachments/assets/b6c31c1a-1f95-4de0-97e2-81a04908bde3)
@@ -58,11 +56,20 @@ Store Google Client ID, secret values and other sensitive settings in KeyVault S
 
 ![image](https://github.com/user-attachments/assets/75c82454-0f43-4c2a-bada-8d20332fa9b9)
 
+## Documentation
+
+* [Google SSO module user documentation](https://docs.virtocommerce.org/platform/user-guide/google-sso/overview/)
+* [REST API](https://virtostart-demo-admin.govirto.com/docs/index.html?urls.primaryName=VirtoCommerce.GoogleSSO)
+* [Add Google as SSO provider to Platform](https://docs.virtocommerce.org/platform/developer-guide/Fundamentals/Security/extensions/adding-google-as-sso-provider/)
+* [Add Google as SSO provider to Frontend](https://docs.virtocommerce.org/storefront/developer-guide/authentication/adding-google-as-sso-provider/)
+* [View on GitHub](https://github.com/VirtoCommerce/vc-module-google-sso)
+
 ## References
-* Home: https://virtocommerce.com
-* Documentation: https://docs.virtocommerce.org
-* Community: https://www.virtocommerce.org
-* [Download Latest Release](https://github.com/VirtoCommerce/vc-module-google-sso/releases)
+* [Deployment](https://docs.virtocommerce.org/platform/developer-guide/Tutorials-and-How-tos/Tutorials/deploy-module-from-source-code/)
+* [Installation](https://docs.virtocommerce.org/platform/user-guide/modules-installation/)
+* [Home](https://virtocommerce.com)
+* [Community](https://www.virtocommerce.org)
+* [Download latest release](https://github.com/VirtoCommerce/vc-module-google-sso/releases/latest)
 
 ## License
 Copyright (c) Virto Solutions LTD.  All rights reserved.
