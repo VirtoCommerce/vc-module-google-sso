@@ -58,6 +58,16 @@ public class Module : IModule, IHasConfiguration
                             }
                             return Task.CompletedTask;
                         };
+
+                        openIdConnectOptions.Events.OnRedirectToIdentityProviderForSignOut = context =>
+                        {
+                            if (string.IsNullOrEmpty(context.ProtocolMessage.IssuerAddress))
+                            {
+                                context.ProtocolMessage.IssuerAddress = "https://accounts.google.com/Logout";
+                            }
+
+                            return Task.CompletedTask;
+                        };
                     });
 
                 // register default external provider implementation
