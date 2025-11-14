@@ -6,7 +6,6 @@
 
   <platformVersion>3.916.0-alpha.13164-vcst-4203-cleanup</platformVersion>
   <dependencies>
-    <!--<dependency id="VirtoCommerce.Core" version="3.800.0" />-->
   </dependencies>
 
   <title>Google Single Sign-On</title>
