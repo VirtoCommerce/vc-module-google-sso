@@ -19,7 +19,7 @@
   </owners>
 
   <projectUrl>https://github.com/VirtoCommerce/vc-module-google-sso</projectUrl>
-  <iconUrl>Modules/$(VirtoCommerce.GoogleSSO)/Content/logo.png</iconUrl>
+  <iconUrl>Modules/$(VirtoCommerce.GoogleSSO)/Content/logo.svg</iconUrl>
   <requireLicenseAcceptance>false</requireLicenseAcceptance>
 
   <assemblyFile>VirtoCommerce.GoogleSSO.Web.dll</assemblyFile>
