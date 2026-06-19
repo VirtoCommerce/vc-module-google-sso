@@ -9,7 +9,7 @@
   <ItemGroup>
     
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="10.0.1" />
-    <PackageReference Include="VirtoCommerce.Platform.Security" Version="3.1002.0" />
+    <PackageReference Include="VirtoCommerce.Platform.Security" Version="3.1039.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VirtoCommerce.GoogleSSO.Core\VirtoCommerce.GoogleSSO.Core.csproj" />
